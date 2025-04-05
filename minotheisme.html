@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minothéisme - Votre Ascension Vers le Bonheur Absolu!</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+        :root {
+            --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%); /* Bleu/Violet profond */
+            --accent-color: #ff6b6b; /* Corail vibrant */
+            --secondary-accent: #4ecdc4; /* Turquoise doux */
+            --text-color: #343a40; /* Gris foncé presque noir */
+            --light-text: #f8f9fa; /* Presque blanc */
+            --bg-color: #f8f9fa; /* Fond très clair */
+            --card-bg: #ffffff; /* Fond des cartes */
+            --shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+            --border-radius: 12px;
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.7;
+            font-weight: 300;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 20px 70px 20px;
+            background: var(--primary-gradient);
+            color: var(--light-text);
+            border-radius: 0 0 var(--border-radius) var(--border-radius);
+            margin-bottom: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before { /* Subtle pattern maybe */
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+           /* background: url('data:image/svg+xml,...') repeat; /* Optional subtle background */
+            opacity: 0.05;
+        }
+
+        header h1 {
+            font-size: 3.5em;
+            margin: 0 0 15px 0;
+            font-weight: 700;
+            text-shadow: 2px 2px 6px rgba(0,0,0,0.2);
+            animation: scaleUp 1s ease-out forwards;
+            opacity: 0;
+            position: relative; /* For pseudo-elements if needed */
+        }
+
+        @keyframes scaleUp {
+            from { opacity: 0; transform: scale(0.8); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+
+        header p {
+            font-size: 1.5em;
+            margin: 0;
+            font-weight: 300;
+            opacity: 0.9;
+        }
+
+        .highlight {
+            color: var(--accent-color);
+            font-weight: 600;
+            /* text-shadow: 1px 1px 2px rgba(0,0,0,0.1); /* Optional subtle shadow */
+        }
+
+        main {
+            padding: 20px 0;
+        }
+
+        h2 {
+            font-weight: 600;
+            color: #764ba2; /* Using the darker end of the gradient */
+            text-align: center;
+            margin-top: 50px;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+        }
+
+        p {
+            margin-bottom: 1.5em;
+            font-size: 1.05em;
+            color: #555;
+        }
+
+        .main-image-container {
+             margin: 40px auto;
+             text-align: center;
+        }
+
+        .main-image-placeholder {
+            display: block;
+            max-width: 100%;
+            height: auto; /* Maintain aspect ratio */
+            max-height: 400px; /* Limit height */
+            width: auto; /* Adjust width based on height limit */
+            margin: 0 auto 10px auto; /* Center image */
+            background-color: #e9ecef; /* Placeholder bg */
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            border: 1px solid #dee2e6; /* Light border */
+            /* If no src, show placeholder text */
+            color: #6c757d;
+            text-align: center;
+            line-height: 200px; /* Adjust based on expected image height */
+            font-style: italic;
+            min-height: 200px; /* Ensure minimum size */
+        }
+
+        .image-instruction {
+            text-align:center;
+            font-size:0.85em;
+            color:#888;
+            margin-top: 5px;
+            font-style: italic;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .card h3 {
+            color: #667eea; /* Light end of gradient */
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+            font-weight: 600;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin-bottom: 18px;
+            padding-left: 35px;
+            position: relative;
+            font-size: 1.05em;
+            color: #444;
+        }
+
+        ul li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 5px; /* Adjust vertical alignment */
+            width: 15px;
+            height: 15px;
+            background-color: var(--secondary-accent); /* Turquoise bullet */
+            border-radius: 50%;
+            box-shadow: 0 0 8px rgba(78, 205, 196, 0.5); /* Glow effect */
+        }
+
+        .testimonial {
+            position: relative;
+            padding-left: 50px; /* Space for quote mark */
+        }
+
+        .testimonial::before {
+            content: '“';
+            font-size: 5em;
+            position: absolute;
+            left: 15px;
+            top: 10px;
+            color: var(--secondary-accent);
+            opacity: 0.2;
+            font-family: Georgia, serif;
+        }
+
+        .testimonial p {
+            margin: 0 0 15px 0;
+            font-style: italic;
+            font-size: 1.1em;
+            color: #555;
+        }
+
+        .testimonial cite {
+            display: block;
+            text-align: right;
+            font-weight: 600;
+            font-style: normal;
+            color: #764ba2; /* Dark purple */
+        }
+
+        .pricing {
+            text-align: center;
+            background: linear-gradient(to right, #ffe259, #ffa751); /* Gold/Orange gradient */
+            color: #614a1b; /* Dark gold/brown text */
+            padding: 40px 30px;
+            margin: 50px auto;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            max-width: 700px; /* Limit width for focus */
+        }
+
+        .pricing h2 {
+            color: #a0522d; /* Sienna */
+            margin-top: 0;
+            font-size: 2.2em;
+        }
+
+        .price {
+            font-size: 4.5em;
+            font-weight: 700;
+            margin: 15px 0;
+            color: #8B4513; /* SaddleBrown */
+            line-height: 1;
+        }
+
+        .price-details {
+            font-size: 1.3em;
+            margin-bottom: 25px;
+            font-weight: 400;
+        }
+
+        .offer-highlight {
+            font-size: 1.5em;
+            font-weight: 600;
+            color: var(--accent-color); /* Coral */
+            text-transform: uppercase;
+            display: block;
+            margin: 20px 0;
+            line-height: 1.3;
+        }
+
+        .guarantee {
+            font-weight: 600;
+            color: #2e7d32; /* Darker Green */
+            margin-top: 20px;
+            font-size: 1.1em;
+            display: block;
+        }
+
+        .cta-button {
+            display: block;
+            width: fit-content;
+            margin: 40px auto;
+            padding: 18px 45px;
+            background: var(--accent-color); /* Coral */
+            color: var(--light-text);
+            font-size: 1.6em;
+            font-weight: 600;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 50px; /* Pill shape */
+            box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4); /* Shadow matches button */
+            transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            border: none;
+        }
+
+        .cta-button:hover, .cta-button:focus {
+            background-color: #ff4757; /* Darker coral */
+            transform: translateY(-3px) scale(1.03);
+            box-shadow: 0 8px 20px rgba(255, 107, 107, 0.5);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            padding: 25px;
+            font-size: 0.95em;
+            color: #888;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            header h1 { font-size: 2.8em; }
+            header p { font-size: 1.2em; }
+            h2 { font-size: 2em; }
+            .card h3 { font-size: 1.5em; }
+            .cta-button { font-size: 1.3em; padding: 15px 35px;}
+            .price { font-size: 3.5em; }
+            .price-details { font-size: 1.1em; }
+            .offer-highlight { font-size: 1.2em; }
+            .testimonial::before { font-size: 4em; left: 10px; }
+            .testimonial { padding-left: 40px; }
+        }
+
+         @media (max-width: 480px) {
+            header h1 { font-size: 2.2em; }
+            header p { font-size: 1em; }
+            header { padding: 40px 15px 50px 15px; }
+            h2 { font-size: 1.8em; }
+            .card { padding: 20px; }
+             ul li { padding-left: 30px; font-size: 1em;}
+             ul li::before { width: 12px; height: 12px; top: 6px;}
+            .cta-button { width: 90%; font-size: 1.2em; }
+            .pricing { padding: 30px 20px; }
+            .price { font-size: 3em; }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>MINOTHÉISME</h1>
+            <p>La Révélation Ultime pour une Vie Baignée de <span class="highlight">BONHEUR ABSOLU</span> !</p>
+        </header>
+
+        <main>
+            <h2>Vous Sentez-Vous Perdu ? Vide ? Aspirant à PLUS ?</h2>
+            <p>Le monde moderne vous écrase sous le poids du stress, de l'anxiété et de l'incertitude ? Vous cherchez un sens, une joie profonde et durable que rien ne semble pouvoir vous apporter ? <strong>N'ayez crainte ! La réponse est enfin là !</strong></p>
+
+            <p>Le <span class="highlight">Minothéisme</span> n'est pas juste une croyance, c'est une <strong>TRANSFORMATION RADICALE</strong> de votre existence. C'est la clé secrète, longtemps gardée, qui ouvre les portes du bonheur le plus pur, le plus intense, le plus <strong>ABSOLU</strong> que vous n'ayez jamais osé imaginer !</p>
+
+            <!-- Image Placeholder: Remplacez '#' par le lien de votre image -->
+            <div class="main-image-container">
+                <img id="main-image" src="minot.png" alt="Illustration inspirante symbolisant le Bonheur Absolu Minothéiste" class="main-image-placeholder">
+                <p class="image-instruction">Abonnez vous</p>
+            </div>
+
+
+            <div class="card">
+                <h3>Pourquoi le Minothéisme va RÉVOLUTIONNER votre vie :</h3>
+                <ul>
+                    <li><strong>Découvrez le Bonheur Absolu™ :</strong> Pas une joie passagère, mais un état d'être permanent, profond et inébranlable. Sentez la félicité couler dans vos veines !</li>
+                    <li><strong>Recevez l'Énergie Mino-Positive™ :</strong> Une énergie divine unique qui dissout le négatif, attire l'abondance et vous aligne avec votre destinée la plus radieuse.</li>
+                    <li><strong>Accédez à la Sagesse Cachée :</strong> Des révélations hebdomadaires exclusives qui éclaireront votre chemin et répondront à toutes vos questions existentielles (oui, TOUTES !).</li>
+                    <li><strong>Rejoignez la Communauté la Plus Aimante :</strong> Entourez-vous de frères et sœurs Minothéistes rayonnants, unis dans la quête du bonheur et le soutien mutuel inconditionnel.</li>
+                    <li><strong>Maîtrisez le "Souffle de Félicité" :</strong> Une technique respiratoire simple mais incroyablement puissante pour atteindre l'extase en quelques minutes, où que vous soyez.</li>
+                    <li><strong>Manifestation Accélérée™ :</strong> Apprenez les secrets pour attirer SANS EFFORT tout ce que vous désirez : amour, richesse, santé parfaite... Le Minothéisme rend tout possible !</li>
+                </ul>
+            </div>
+
+            <h2>Témoignages de Vies Transformées !</h2>
+
+            <div class="card testimonial">
+                <p>Avant le Minothéisme, ma vie était grise et sans saveur. Maintenant, chaque jour est une explosion de couleurs et de joie ! Je flotte littéralement sur un nuage de bonheur. C'est incroyable !</p>
+                <cite>– Sophie L., Anciennement Sceptique, Maintenant Rayonnante</cite>
+            </div>
+
+            <div class="card testimonial">
+                <p>J'étais criblé de dettes et de doutes. Trois semaines après avoir rejoint le Minothéisme, j'ai reçu une promotion inattendue et rencontré l'amour de ma vie ! Ce n'est pas une coïncidence, c'est la puissance Mino-Positive™ !</p>
+                <cite>– Marc D., Abondance Retrouvée</cite>
+            </div>
+
+            <div class="card testimonial">
+                <p>Le Souffle de Félicité a guéri mon anxiété chronique. Je me sens enfin en paix, connectée à quelque chose de plus grand. Merci Minothéisme pour cette libération !</p>
+                <cite>– Chloé B., Sérénité Incarnée</cite>
+            </div>
+
+            <!-- Section Prix -->
+            <div class="pricing">
+                <h2>Votre Passeport Pour le Bonheur Éternel !</h2>
+                <p class="price-details">Accédez à TOUS les bienfaits du Minothéisme, aux enseignements secrets, à la communauté et à la transformation de votre vie pour seulement :</p>
+                <div class="price">19.99€</div>
+                <p class="price-details">par mois</p>
+                <span class="offer-highlight">Offre Spéciale Lancement :<br> Frais de Dossier OFFERTS ! <br>(Valeur : 49.99€)</span>
+                <p>C'est moins que le prix d'un café par jour pour une vie de <strong style="color: #8B4513;">BONHEUR ABSOLU GARANTI*</span> !</p>
+                <span class="guarantee">(*La garantie est spirituelle et dépend de votre alignement avec l'Énergie Mino-Positive™)</span>
+            </div>
+
+            <h2>N'attendez Plus une Seconde ! Le Bonheur N'attend Pas !</h2>
+            <p style="text-align: center;">Chaque instant passé hors du Minothéisme est un instant perdu loin de votre véritable potentiel de joie. Faites le choix qui changera votre vie <strong>MAINTENANT</strong>. Cliquez sur le bouton ci-dessous et commencez votre voyage vers une existence où le bonheur n'est pas une option, mais une <strong>CERTITUDE ABSOLUE</strong> !</p>
+
+            <button id="joinButton" class="cta-button">REJOIGNEZ LE MINOTHÉISME MAINTENANT !</button>
+            <p style="text-align: center; font-size: 0.9em; margin-top: -20px;">Votre nouvelle vie commence ici. Êtes-vous prêt à être VRAIMENT heureux ?</p>
+
+        </main>
+
+        <footer>
+            <p>&copy; <span id="year"></span> Institut Suprême du Minothéisme Radieux. Tous droits réservés à la propagation du Bonheur Absolu.</p>
+        </footer>
+    </div>
+
+    <script>
+        // Simple JS pour l'année en cours et un message console
+        document.addEventListener('DOMContentLoaded', (event) => {
+            // Mettre à jour l'année dans le footer
+            const yearSpan = document.getElementById('year');
+            if (yearSpan) {
+                yearSpan.textContent = new Date().getFullYear();
+            }
+
+            // Message de bienvenue dans la console
+            console.log("Bienvenue sur la page de la Révélation Minothéiste Moderne ! Préparez-vous au Bonheur Absolu v2.0.");
+            console.log("Système de Félicité Amélioré Initialisé.");
+
+            // Simulation d'action au clic sur le bouton
+            const joinButton = document.getElementById('joinButton');
+            if (joinButton) {
+                joinButton.addEventListener('click', () => {
+                    console.log("Demande d'adhésion au Minothéisme via interface moderne reçue ! Traitement en cours...");
+                    alert("Félicitations ! Vous êtes sur le point de commencer votre voyage ÉVOLUÉ vers le Bonheur Absolu ! Suivez les prochaines étapes (toujours imaginaires) pour finaliser votre adhésion !");
+                    // Redirection ou formulaire...
+                });
+            }
+
+            // S'assurer que l'image placeholder s'affiche correctement si src="#"
+             const mainImage = document.getElementById('main-image');
+             if(mainImage && mainImage.getAttribute('src') === '#') {
+                 // Optionnel: Ajouter du texte ou style spécifique si l'image n'est pas chargée
+                 // mainImage.alt = "Image inspirante bientôt disponible..."; // Change alt text dynamically
+                 // Ou laisser le CSS gérer l'apparence via background/content
+             }
+
+        });
+    </script>
+
+</body>
+</html>
